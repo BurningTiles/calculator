@@ -1,0 +1,45 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="calculator.css" />
+		<script type="text/javascript" src="calculator.js"> </script> 
+		<title>Calculator</title>
+	</head>
+	<body>
+		<div class="calc">
+				<div class="row">
+					<p id="display">0</p>
+					<div class="rowf">
+						<input class="dbtn" type="button" value="<" onClick="back()" />
+						<input class="dbtn" type="button" value="C" OnClick="clearDisplay()" />
+					</div>
+				</div>
+				<div class="row">
+					<input class="btn" type="button" value="1" />
+					<input class="btn" type="button" value="2" />
+					<input class="btn" type="button" value="3" />
+					<input class="btn" type="button" value="/"  />
+				</div>
+				<div class="row">
+					<input class="btn" type="button" value="4" />
+					<input class="btn" type="button" value="5" />
+					<input class="btn" type="button" value="6" />
+					<input class="btn" type="button" value="*" />
+				</div>
+				<div class="row">
+					<input class="btn" type="button" value="7" />
+					<input class="btn" type="button" value="8" />
+					<input class="btn" type="button" value="9" />
+					<input class="btn" type="button" value="-" />
+				</div>
+				<div class="row">
+					<input class="btn" type="button" value="." />
+					<input class="btn" type="button" value="0" />
+					<input class="btn" type="button" value="+" />
+					<input class="sbtn" type="button" value="=" onClick="calculate()" />
+				</div>
+		</div>
+	</body>
+</html>
