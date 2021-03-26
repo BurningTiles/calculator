@@ -32,25 +32,23 @@ function back() {
 }
 
 function cal(eq) {
-	if(eq.includes('+')){
-		let tmp = eq.split('+',2);
-		return cal(tmp[0]) + cal(tmp[1]);
-	}
-	if(eq.includes('-')){
-		let tmp = eq.split('-',2);
-		return cal(tmp[0]) - cal(tmp[1]);
+	console.log(eq);
+	if(eq.includes('+') || eq.includes('-')){
+		let a = -1, s = -1;
+		for(let i=eq.length-1; i>=0 && a<0 && s<0; i--){
+			if(eq[i]=='+') a=i;
+			if(eq[i]=='-') s=i;
+		}
+		if(a>s)
+			return cal(eq.slice(0,a)) + cal(eq.slice(a+1,eq.length));
+		else
+			return cal(eq.slice(0,s)) - cal(eq.slice(s+1,eq.length));
 	}
 	if(eq.includes('*') || eq.includes('/')){
 		let m = -1, d = -1;
-		for(let i=eq.length-1; i>=0; i--){
-			if(eq[i]=='*'){
-				m=i;
-				break;
-			}
-			if(eq[i]=='/'){
-				d=i;
-				break;
-			}
+		for(let i=eq.length-1; i>=0 && m<0 && d<0; i--){
+			if(eq[i]=='*') m=i;
+			if(eq[i]=='/') d=i;
 		}
 		if(m>d)
 			return cal(eq.slice(0,m)) * cal(eq.slice(m+1,eq.length));
