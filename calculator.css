@@ -4,6 +4,27 @@ body {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
+	background: hsla(152, 100%, 50%, 1);
+
+	background: linear-gradient(
+		90deg,
+		hsla(152, 100%, 50%, 1) 0%,
+		hsla(186, 100%, 69%, 1) 100%
+	);
+
+	background: -moz-linear-gradient(
+		90deg,
+		hsla(152, 100%, 50%, 1) 0%,
+		hsla(186, 100%, 69%, 1) 100%
+	);
+
+	background: -webkit-linear-gradient(
+		90deg,
+		hsla(152, 100%, 50%, 1) 0%,
+		hsla(186, 100%, 69%, 1) 100%
+	);
+
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00FF87", endColorstr="#60EFFF", GradientType=1 );
 }
 
 .calc {
@@ -11,6 +32,7 @@ body {
 	box-shadow: 0 0 30px 2px black;
 	border-radius: 10px;
 	padding: 20px;
+	background: #FFFFFF;
 }
 
 .row {
@@ -35,29 +57,36 @@ body {
 #display {
 	width: 70%;
 	padding: 10px;
-	margin:0;
+	margin: 0;
 	text-align: end;
 	border: 1px solid;
 	border-radius: 7px;
 	font-size: 20px;
+	background: #FFFFFF;
+	box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 10px 0px;
 }
 
-.btn, .sbtn {
+.btn,
+.sbtn {
 	width: 22%;
 	padding: 10px;
-	margin:0;
+	margin: 0;
 	text-align: center;
 	border: 1px solid;
 	border-radius: 7px;
 	font-size: 20px;
+	background: #FFFFFF;
+	box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 10px 0px;
 }
 
 .dbtn {
 	width: 45%;
 	padding: 10px;
-	margin:0;
+	margin: 0;
 	text-align: center;
 	border: 1px solid;
 	border-radius: 7px;
 	font-size: 20px;
+	background: #FFFFFF;
+	box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 10px 0px;
 }
